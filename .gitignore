@@ -3,6 +3,7 @@ Data/
 TALib data analysis/
 *.pdf
 *.docx
+*.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
