@@ -171,3 +171,65 @@ The results of the financial metrics can be displayed as a summary report for ea
 In Task 2, we performed quantitative analysis on stock data using TA-Lib. We calculated key technical indicators (RSI, MACD, SMA, EMA) and visualized stock price trends. The financial metrics provide insights into each stock's performance, aiding in informed decision-making for potential investments.
 
 This analysis lays the foundation for advanced topics such as portfolio optimization and market predictions.
+
+# Task 3: Correlation between News and Stock Movement
+## Objective
+
+This task aims to analyze the correlation between news sentiment and stock movements. Specifically, we investigate how daily sentiment from news headlines correlates with daily stock returns for various companies. By doing so, we aim to uncover whether there’s any linear relationship between the sentiment of news articles and stock price fluctuations.
+Key Steps
+
+    Data Preparation:
+        The stock price data is obtained from CSV files, including columns such as Open, High, Low, Close, Volume, and Daily Returns.
+        The news sentiment data is derived from headlines, where the sentiment of each article is quantified on a scale from -1 (negative) to 1 (positive).
+        Both datasets are aligned by date to ensure proper comparison.
+
+    Sentiment Analysis:
+        News headlines are analyzed for sentiment using an appropriate tool, such as TextBlob or a similar library.
+        Sentiment scores are generated and normalized between -1 and 1, indicating the tone of the article (negative, neutral, or positive).
+
+    Correlation Analysis:
+        Daily stock returns are calculated as the percentage change in the closing stock price.
+        The correlation between daily sentiment scores and daily stock returns is computed using Pearson’s correlation.
+        A positive correlation would suggest that positive news correlates with positive stock movements, and a negative correlation would indicate the opposite.
+
+    Results:
+        The correlation coefficients for each stock are calculated to assess the relationship between sentiment and stock movement.
+        A low or near-zero correlation would suggest that sentiment does not strongly influence daily stock returns.
+
+Dataset
+
+    Stock Data:
+        Data is sourced from Yahoo Finance, and includes daily stock prices for companies such as AAPL, AMZN, TSLA, GOOG, META, MSFT, and others.
+        Essential columns include Open, High, Low, Close, Volume, and Date.
+
+    News Sentiment Data:
+        Sentiment scores are derived from news headlines. Each article is associated with a date, and the sentiment score is computed based on the content of the headline.
+        Data includes headline, publisher, date, and sentiment (between -1 and 1).
+
+### Tools and Libraries
+
+    Pandas: For data manipulation and merging datasets.
+    NumPy: For numerical operations.
+    SciPy: For statistical analysis and Pearson correlation calculation.
+    TextBlob: For sentiment analysis.
+    Matplotlib/Seaborn: For visualizing results.
+
+### Analysis Approach
+
+    Sentiment Calculation: A sentiment score is calculated for each news article headline, reflecting the positive, neutral, or negative tone of the article.
+    Correlation Calculation: The Pearson correlation coefficient is used to quantify the relationship between the sentiment scores and the daily stock returns for each stock.
+
+### Results and Interpretation
+
+    Correlations: The task provides insights into whether sentiment (from news articles) correlates with stock price movements.
+    Weak Correlation: The analysis shows that the correlation between sentiment and stock returns is generally weak (values close to 0), suggesting that news sentiment may not have an immediate or strong effect on stock prices.
+
+### Conclusion
+
+The analysis suggests that while sentiment from news headlines provides some information about the tone surrounding a company, it does not exhibit a strong correlation with daily stock price fluctuations. This could be due to various factors, such as:
+
+    Other factors driving stock prices (market conditions, earnings reports, etc.)
+    Delayed effects of news sentiment on stock prices
+    Limitations in sentiment analysis tools
+
+Further investigations using longer time periods, more advanced sentiment models, or alternative factors like technical indicators may provide deeper insights.
