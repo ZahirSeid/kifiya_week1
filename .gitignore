@@ -1,3 +1,8 @@
+Data/
+'TALib data analysis'/
+TALib data analysis/
+*.pdf
+*.docx
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
