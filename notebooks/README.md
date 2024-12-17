@@ -104,8 +104,70 @@ kifiya_week1/
 ├── README.md                            # This README file
 ```
 
----
+# Task 2: Quantitative Analysis Using TA-Lib
+## Overview
 
-## Acknowledgments
-- **VADER Sentiment Analysis** for its effective sentiment scoring.
-- The dataset for providing a rich source of financial headlines for analysis.
+This project focuses on applying quantitative analysis to historical stock data using TA-Lib (Technical Analysis Library). We calculate and visualize key technical indicators and financial metrics for various stocks.
+
+The task includes:
+
+    Loading and preparing stock price data.
+    Calculating technical indicators like RSI, MACD, SMA, and EMA.
+    Visualizing the data for better insights into the stock trends.
+    Calculating financial metrics such as expected return, volatility, and cumulative return.
+    Reporting the analysis results and key insights.
+
+Steps to Complete
+1. Install Dependencies
+
+To run the analysis, first, install the required libraries:
+
+pip install pandas matplotlib TA-Lib pyportfolioopt
+
+2. Load Stock Data
+
+We use pandas to load historical stock price data from CSV files in the yfinance_data directory. Ensure that the data includes columns like Open, High, Low, Close, and Volume.
+
+import pandas as pd
+
+# Example: Load stock data for AAPL
+aapl_df = pd.read_csv("Data/AAPL_historical_data.csv")
+
+3. Calculate Technical Indicators
+
+We calculate the following technical indicators using TA-Lib:
+
+    RSI (Relative Strength Index)
+    MACD (Moving Average Convergence Divergence)
+    SMA (Simple Moving Average)
+    EMA (Exponential Moving Average)
+    Cumulative Return (percentage change in stock prices over time)
+
+4. Visualize Data
+
+The following visualizations are generated:
+
+    Stock Price Trends: Plots the Close Price, SMA_50, and EMA_12.
+    RSI: Plots the RSI with overbought and oversold levels.
+    MACD: Plots the MACD line, signal line, and MACD histogram.
+
+
+5. Calculate Financial Metrics
+
+The financial metrics calculated for each stock include:
+
+    RSI Mean
+    MACD Mean
+    SMA_50 Mean
+    EMA_12 Mean
+    Cumulative Return
+
+6. Generate a Report
+
+The results of the financial metrics can be displayed as a summary report for each stock.
+
+### Conclusion
+
+In Task 2, we performed quantitative analysis on stock data using TA-Lib. We calculated key technical indicators (RSI, MACD, SMA, EMA) and visualized stock price trends. The financial metrics provide insights into each stock's performance, aiding in informed decision-making for potential investments.
+
+This analysis lays the foundation for advanced topics such as portfolio optimization and market predictions.
